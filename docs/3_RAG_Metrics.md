@@ -2,10 +2,10 @@
 
 ### Golden Data Set:
 
-- It is like having unit tests for normal application.
+- It is like we write unit tests for normal application.
 - TDD (Test Driven Development) -> EDD (Eval Driven Development)
 
-- Types of data the dataset SHOULD have?
+- Types of data the golden dataset **should** have?
     - Fact
     - Multi-hop
     - Summary

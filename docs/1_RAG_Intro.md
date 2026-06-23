@@ -35,7 +35,7 @@ The tool can be:
 
 ### RAG pipelines:
 
-2 types:
+2 pipelines:
 - Ingestion pipeline - source -> load -> chunk -> embed -> store
 - Retrieval pipeline - user query -> embeddings -> search the store -> fetch top K chunks -> send to LLM  (user query + k chunks) -> generates response.
 
@@ -44,7 +44,7 @@ The tool can be:
 - Sparse retrieval : the keyword vector is mostly zeros - only terms that appear in the document get a non-zero value
 
 ### Chunking strategies:
-- Chunk size - generally I prefer to choose 512 to 1024
+- Chunk size - generally we can choose 512 to 1024
 - Chunk overlap
 - AST (Abstract Syntax Tree) (used for codebases)
     - This is used because in the huge codebase, the normal test splitters will not work. The code has to be splitted understanding its semantics
