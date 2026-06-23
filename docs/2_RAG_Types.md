@@ -53,6 +53,7 @@ _________               _____________
 ```
 - Knowledge is pre-indexed as a graph (nodes = entities, edges = relationships), and queries traverse that graph at search time. 
 - Used in GraphRAG (Microsoft) and enterprise knowledge graph systems.
+- White paper: [GraphRAG - Graph Based retrieval and Reasoning]( https://arxiv.org/abs/2404.16130)
 
 ### Corrective RAG or C-RAG
 - Add a critic/evaluator after retrieval that judges whether the retrieved chunks are actually good enough before passing to LLM.
@@ -60,6 +61,7 @@ _________               _____________
 
 ### Self RAG
 - The LLM itself generates special reflection tokens throughout the process — deciding at each step what to do next. No separate critic — the LLM is its own judge.
+- White paper: [Self-Reflective / Validation RAG]( https://arxiv.org/abs/2310.11511)
 
 ### SQL RAG
 - If we use SQL database as a retrieval tool. It is SQL RAG
@@ -87,6 +89,7 @@ Company
 - Hypothetical Document Enbeddings
 - If user queries are not good enough - We can generate information from hypothetical documents.
 - Adding some context and relavant terms
+- White paper: [HyDE - Query Expansion/Retrieval Improvement RAG](https://arxiv.org/abs/2212.10496)
 
 ### RAPTOR RAG
 - RAPTOR = Recursive Abstractive Processing for Tree Organized Retrieval
@@ -107,6 +110,7 @@ Company
     - Queries range from high-level to very specific ("Summarize this entire codebase" vs "What does fn X do")
     - Multi-document reasoning needed
     - You want the system to self-organize knowledge
+- White papaer: [RAPTOR]( https://arxiv.org/abs/2401.18059)
 
 ### Vectorless RAG
 
@@ -114,3 +118,4 @@ Company
 - It builds a hierarchial indexes (just like a table of contents for a book), So LLM reason over the index and identifies which chunk it has to go to.
     - Example: We have 2 chapters say, Networking and Databases. If i want to understand about SQL I will search index and check for Databases chapter and go to it.
 - So, there is NO SEMANTIC SEARCH, that means NO EMBEDDINGS being used here. Hence called VECTORLESS
+- Github repo: [PageIndex - Structure-Aware Retrieval Without Embeddings]( https://github.com/VectifyAI/PageIndex)

@@ -27,8 +27,21 @@ Ranking is the process of ordering documents by how relevant they are to the que
 - Different retrievers find different relevant documents. We want to combine multiple ranked lists into a single, better list — without re-reading any document text.
 
 - RRF (Reciprocal Rank Fusion)
-    - The most popular fusion method in modern RAG. 
+    - A document should rank higher if:
+        - It appears high in a retriever's results.
+        - It appears in multiple retrievers' results.
+    - RRF rewards both rank position and agreement across retrievers.
     - Simple, robust, and parameter-free (except k). 
+    ```
+    Formula : 
+        RRF score (d) = Σ  1 / (k + rank)
+        
+        where:
+            d = document/chunk
+            rank = position of the document in a retriever's ranking
+            k = smoothing constant (typically 60)
+
+    ```
 
 - Weighted Score Fusion
     - Combines raw scores directly. 

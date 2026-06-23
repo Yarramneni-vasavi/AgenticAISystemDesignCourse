@@ -24,3 +24,9 @@ Context contains:
     - called Recency effect
     - It is important because LLM's are designed in such a way that to generate next word they see the last few words.
 
+Strategies to improve the Context:
+- Context Expansion - Example: Hyde RAG concept - Adding some extra context.
+- Context Compression - Example: RAPTOR concept - Summarizing things.
+- Context Selection - choosing Top K.
+- Context pruning - deduplication, removing stale/irrelavant data
+- Context Ordering - Reorder context so that we can give importance to middle also.
