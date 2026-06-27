@@ -69,4 +69,4 @@ but a relevant chunk at Rank 1 is much better than at Rank 10 because the LLM pa
 
 #### End to End Metrics
 
-- Factual Correctness
+- Factual Correctness - How factually accurate is the generated answer compared to the ground-truth answer?
